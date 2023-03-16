@@ -24,6 +24,9 @@
     .section-wrap{
         padding: 60px 0 ;
     }
+     .footer-bottom{
+        margin-bottom: 60px;
+    }
 
 }
 
@@ -37,9 +40,6 @@
     .section-head h2{
         font-size: 48px;
     }
-    .footer-bottom{
-        margin-bottom: 60px;
-    }
-
+   
    
 }
