@@ -1,0 +1,41 @@
+
+@media (max-width: 991.98px) {
+    .footer-link a{
+        padding: 0 5px;
+        margin: 0 2px;
+    }
+    
+    .banner-wrapper{
+        padding-top: 200px;
+        padding-bottom: 32px; 
+    }
+    .section-wrap{
+        padding: 90px 0 ;
+    }
+    
+}
+@media (max-width: 767.98px) {
+    .footer-logo {
+        padding-top: 0px;
+    }
+    .footer-contact a{
+        font-size: 30px;
+    }
+    .section-wrap{
+        padding: 60px 0 ;
+    }
+
+}
+
+
+@media (min-width: 992px) { 
+
+    .header-content h2{
+        font-size: 72px;
+        ;
+    }
+    .section-head h2{
+        font-size: 48px;
+    }
+   
+}
