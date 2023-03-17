@@ -43,6 +43,11 @@
     .stories-content {
         padding: 0 30px;
     }
+    .menu-img{
+        right: 30px;
+        width: 260px;
+        height: 260px;
+    }
 
 }
 
