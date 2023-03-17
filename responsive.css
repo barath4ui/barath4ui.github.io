@@ -40,6 +40,9 @@
     .max-sm-b-50{
         margin-bottom: 50px;
     }
+    .stories-content {
+        padding: 0 30px;
+    }
 
 }
 
