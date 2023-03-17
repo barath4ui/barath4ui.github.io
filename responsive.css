@@ -12,6 +12,13 @@
     .section-wrap{
         padding: 90px 0 ;
     }
+    .s-wrap{
+        margin-bottom: 50px;
+    }
+    .img-md-100{
+        width: 100% !important;
+    }
+    
     
 }
 @media (max-width: 767.98px) {
@@ -27,9 +34,27 @@
     .footer-bottom{
         margin-bottom: 60px;
     }
+    .img-sm-100{
+        width: 100% !important;
+    }
+    .max-sm-b-50{
+        margin-bottom: 50px;
+    }
 
 }
 
+@media (min-width: 1200px) { 
+    .w-wrap{
+        position: absolute;
+        width: 600px;
+        bottom: -2rem;
+        left: 10rem;
+    }
+    .box-right{
+        left: -10rem;
+    }
+
+}
 
 @media (min-width: 992px) { 
 
@@ -39,5 +64,15 @@
     .section-head h2{
         font-size: 48px;
     }
-   
+    .s-wrap{
+        padding: 0 30px !important;
+    }
+    .min-lg-f80{
+        font-size: 60px;
+    }
+    .header-menu ul li a{
+        font-size: 60px;
+    }
 }
+
+
