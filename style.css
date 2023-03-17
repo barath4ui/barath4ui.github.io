@@ -65,6 +65,7 @@ img{
     transform: translateY(-8px);
   }
   .menu-btn:after{
+    top: calc(40% - 1px);
     transform: translateY(8px);
   }
   
@@ -128,7 +129,7 @@ img{
   .wrapper ul li a:after{
     position: absolute;
     content: "";
-    background: #fff;
+    background: #FECB5E;
      /*background: linear-gradient(#14ffe9, #ffeb3b, #ff00e0);*/
     /*background: linear-gradient(375deg, #1cc7d0, #2ede98);*/
     width: 100%;
@@ -144,7 +145,7 @@ img{
     transform: scaleY(1);
   }
   .wrapper ul li a:hover{
-    color: #1a73e8;
+    color: #000;
   }
   input[type="checkbox"]{
     display: none;
