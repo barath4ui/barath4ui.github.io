@@ -154,18 +154,25 @@ img{
 
   }
   .menu-img{
-
-    background-image: url("images/settings-new.png");
-    
     height: 360px;
     width: 360px;
     background-position: center;
     background-repeat: no-repeat;
     background-size: cover;
     position: absolute;
-    right: 60px;
-    top: 120px;
-    opacity: 0.1;
+   
+    top: 50px;
+    opacity: 0.2;
+   
+  }
+
+  .m-about:hover  .menu-img{
+    background-image: url("images/m-about.png");
+    
+  }
+  .m-services:hover  .menu-img{
+    background-image: url("images/m-services.png");
+    
   }
 
   .header-menu ul li a{
