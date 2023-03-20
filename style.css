@@ -160,19 +160,37 @@ img{
     background-repeat: no-repeat;
     background-size: cover;
     position: absolute;
-   
     top: 50px;
-    opacity: 0.2;
+    opacity: 0;
+    transition: transform 250ms;
    
   }
 
   .m-about:hover  .menu-img{
     background-image: url("images/m-about.png");
+    opacity: 0.2;
+    transition: opacity 0.5s linear 0.5s;
     
   }
   .m-services:hover  .menu-img{
     background-image: url("images/m-services.png");
-    
+    opacity: 0.2;
+    transition: opacity 0.5s linear 0.5s;
+  }
+  .m-works:hover  .menu-img{
+    background-image: url("images/m-works.png");
+    opacity: 0.2;
+    transition: opacity 0.5s linear 0.5s;
+  }
+  .m-blog:hover  .menu-img{
+    background-image: url("images/m-blog.png");
+    opacity: 0.2;
+    transition: opacity 0.5s linear 0.5s;
+  }
+  .m-contact:hover  .menu-img{
+    background-image: url("images/m-contact.png");
+    opacity: 0.2;
+    transition: opacity 0.5s linear 0.5s;
   }
 
   .header-menu ul li a{
