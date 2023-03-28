@@ -379,6 +379,20 @@ img{
     background-position: 50% 50%;
     background-size: cover;
 }
+.banner-yellow{
+  background-color: #FECB5E;
+  position: absolute;
+  left: 0;
+  top:0;
+  height: 100%;
+}
+
+.banner-contact{
+  background-image: url(images/banner-contact.png);
+}
+.banner-service{
+  background-image: url(images/banner-service.png);
+}
 .w-wrap{
     background-color: #F8F8F8;
 }
@@ -402,7 +416,6 @@ img{
   margin: 0 15% !important;
 }
 
-
 .inner-head-img{
   height: 360px;
   width: 360px;
@@ -412,7 +425,6 @@ img{
   position: absolute;
   top: -50px;
   right: 0;
-  
   transition: transform 250ms;
  
 }
@@ -424,9 +436,17 @@ img{
 }
 .inner-contact .inner-head-img{
   background-image: url("images/h-contact.png");
-  
+}
+.inner-service .inner-head-img{
+  background-image: url("images/h-service.png");
 }
 
+.inner-subhead span
+{
+  color:#999999;
+  font-size: 1.2rem;
+  display: block;
+}
 .search{
   width: 80%;
   margin: 0 10%;
@@ -447,7 +467,10 @@ img{
 .search-entries{
   color:#999;
 }
-
+.list-style-square{
+  list-style-type: square;
+  padding-left: 20px;
+}
 #footer-Wrap{
     background-color: #000;
     color:#fff;

@@ -1,3 +1,11 @@
+@media (max-width: 1199.98px) { 
+    .banner-yellow{
+        width: 200px;
+    }
+    .banner-innerpage{
+        background-position-x: 200px;
+    }
+}
 
 @media (max-width: 991.98px) {
     .footer-link a{
@@ -27,7 +35,12 @@
         width: 260px;
         top: 0px;
     }
-
+    .banner-yellow{
+        width: 110px;
+    }
+    .banner-innerpage{
+        background-position-x: 110px;
+    }
     
     
 }
@@ -64,6 +77,12 @@
         top: -15px;
         right: 15px;
     }
+    .banner-yellow{
+        width: 0px;
+    }
+    .banner-innerpage{
+        background-position-x: 0px;
+    }
 
 }
 
@@ -80,6 +99,12 @@
     .menu-img
     {
         left: 35rem !important; 
+    }
+    .banner-yellow{
+        width: 300px;
+    }
+    .banner-innerpage{
+        background-position-x: 300px;
     }
 
 }
@@ -107,6 +132,14 @@
     .menu-img
     {
         left: 25rem;
+    }
+    .capabilities-content
+    {
+        width: 900px;
+        margin: 0 auto;
+    }
+    .capabilities-content .col-md-4{
+        padding: 0 60px;
     }
 
 }
