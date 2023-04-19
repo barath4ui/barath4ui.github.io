@@ -1,0 +1,234 @@
+a!localVariables(
+  local!collapsible: false,
+  local!details: {
+    {
+      id: 1,
+      icon:"table",
+      section: "Grid Layout",
+      subsections: {
+        "Grid Design 1",
+        "Grid Design 2",
+        "Grid Design 3"
+      }
+    },    
+    {
+      id: 2,
+      icon:"sliders",
+      section: "Milestones",
+      subsections: {
+        "Milestone Design 1",
+        "Milestone Design 2"
+      }
+    },
+    {
+      id: 3,
+      icon:"sitemap",
+      section: "Navigation Bar",
+      subsections: {
+        "Navbar Design 1"
+      }
+    },
+    {
+      id: 4,
+      icon:"signal",
+      section: "KPI",
+      subsections: { "KPI Design 1", "KPI Design 2" }
+    },
+    {
+      id: 5,
+      icon:"th-large",
+      section: "Tabs",
+      subsections: { "Tab Design 1", "Tab Design 2" }
+    },
+    {
+      id: 6,
+      icon:"code",
+      section: "Breadcrums",
+      subsections: {
+        "Breadcrum Design 1",
+        "Breadcrum Design 2"
+      }
+    },
+    {
+      id: 7,
+      icon:"history",
+      section: "Activity History",
+      subsections: { "Design 1", "Design 2" }
+    },
+    {
+      id: 8,
+      icon:"file-text",
+      section: "Forms",
+      subsections: { "Form Design 1", "Form Design 2" }
+    }
+  },
+  local!activeNavSection:1,
+  local!activeSubNavSection:tointeger(null()),
+  a!headerContentLayout(
+    contents: {    
+      a!columnsLayout(
+        columns: {
+          a!columnLayout(contents: {}, width: "AUTO"),
+          a!columnLayout(
+            contents: {            
+              a!cardLayout(
+                contents: {
+                  a!forEach(
+                    items: local!details,
+                    expression: a!localVariables(
+                      local!parentSection: fv!index,
+                      {
+                        a!cardLayout(
+                          contents: {
+                            a!sideBySideLayout(
+                              items: {                                
+                                a!sideBySideItem(item:a!richTextDisplayField(
+                                  labelPosition:"COLLAPSED",
+                                  value:a!richTextIcon(
+                                    icon:fv!item.icon,
+                                    size:"MEDIUM",
+                                    color: if(
+                                      fv!index = local!activeNavSection,
+                                      "ACCENT",
+                                      "#666666"
+                                    )
+                                  )
+                                ),
+                                width: "MINIMIZE"),
+                                a!sideBySideItem(
+                                  item: a!richTextDisplayField(
+                                    labelPosition: "COLLAPSED",
+                                    value: a!richTextItem(
+                                      text: fv!item.section,
+                                      color:  if(
+                                        fv!index = local!activeNavSection,
+                                        "ACCENT",
+                                        "#444444"
+                                      ),
+                                      size: "MEDIUM",
+                                      style: "STRONG"
+                                    )
+                                  )
+                                ),
+                                a!sideBySideItem(
+                                  item: a!richTextDisplayField(
+                                    labelPosition: "COLLAPSED",
+                                    value: a!richTextIcon(
+                                      icon: if(
+                                        fv!index = local!activeNavSection,
+                                        "angle-down",
+                                        "angle-right"
+                                      ),
+                                      color: if(
+                                        fv!index = local!activeNavSection,
+                                        "ACCENT",
+                                        "#444444"
+                                      ),
+                                      size: "MEDIUM_PLUS"
+                                    )
+                                  ),
+                                  width: "MINIMIZE"
+                                )
+                              },
+                              alignVertical: "MIDDLE"
+                            )
+                          },
+                          shape:"ROUNDED",
+                          link: a!dynamicLink(
+                            value: fv!index,
+                            saveInto: {
+                              local!activeNavSection,
+                              a!save(local!activeSubNavSection,tointeger(null()))
+                            }
+                          ),
+                          height: "AUTO",                         
+                          style: if(
+                            fv!index = local!activeNavSection,
+                            "#F4F8FE",
+                            "NONE"
+                          ),
+                          padding: "STANDARD",
+                          showBorder: false
+                        ),
+                        a!forEach(
+                          items: fv!item.subsections,
+                          expression: a!cardLayout(                           
+                            contents: a!sideBySideLayout(
+                              items: {
+                                a!sideBySideItem(
+                                  item: a!richTextDisplayField(
+                                    labelPosition: "COLLAPSED",
+                                    value: {
+                                      char(32),
+                                      a!richTextItem(
+                                        text: char(9474),
+                                        size: "LARGE",
+                                        color: if(
+                                          fv!index = local!activeSubNavSection,
+                                          "ACCENT",
+                                          "#FFFFFF"
+                                        )
+                                      )
+                                    }
+                                  ),
+                                  width: "MINIMIZE"
+                                ),
+                                a!sideBySideItem(
+                                  item: a!richTextDisplayField(
+                                    labelPosition: "COLLAPSED",
+                                    value: {
+                                      a!richTextItem(
+                                        text: fv!item,
+                                        color: if(
+                                          fv!index = local!activeSubNavSection,
+                                          "ACCENT",
+                                          "STANDARD"
+                                        ),
+                                        size:"MEDIUM",
+                                        style:  if(
+                                          fv!index = local!activeSubNavSection,
+                                          "STRONG",
+                                          "PLAIN"
+                                        )
+                                      )
+                                    }
+                                  )
+                                )
+                              },
+                              alignVertical:"MIDDLE"
+                            ),                            
+                            link: a!dynamicLink(
+                              value: fv!index,
+                              saveInto: local!activeSubNavSection
+                            ),
+                            height: "AUTO",
+                            showWhen: local!activeNavSection = local!parentSection,                           
+                            padding: "LESS",
+                            showBorder: false
+                          )
+                        )
+                      }
+                    )
+                  )
+                },
+                showWhen: local!collapsible = false,
+                style: "NONE",
+                padding: "NONE",
+                marginBelow: "STANDARD",              
+                shape:"ROUNDED"
+              )
+            },
+            width: "NARROW_PLUS"
+          ),
+          a!columnLayout(
+            contents:{},
+            width: "WIDE_PLUS"
+          ),
+          a!columnLayout(width: "AUTO")
+        },
+        spacing: "SPARSE",
+        showDividers: false()
+      )
+    }
+  )
+)
