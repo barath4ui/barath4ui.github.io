@@ -534,6 +534,15 @@ img{
   
 }
 
+.w-links
+{
+  text-decoration: none;
+  color: #212529;
+}
+.w-links:hover h4{
+  color: #3100D3 !important;
+}
+
 
 #footer-Wrap{
     background-color: #000;
