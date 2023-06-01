@@ -124,11 +124,30 @@
 }
 
 @media (min-width: 1200px) { 
+    .container, .container-lg, .container-md, .container-sm, .container-xl{
+        max-width: 1140px !important;
+    }
+    .md-pr-50{
+        padding-right: 50px;
+    }
+    .journal-content{
+        max-width: 760px;
+        margin-left: auto;
+        margin-right: auto;
+    }
+    /* .animate-work:hover .w-wrap {
+        position: absolute;
+        width: 100%;
+        height: 100%;
+        top: 0;
+        left: 0;
+    } */
     .w-wrap{
         position: absolute;
         width: 600px;
         bottom: -2rem;
         left: 10rem;
+        transition: 1.5s;
     }
     .box-right{
         left: -10rem;
@@ -143,8 +162,6 @@
     .banner-innerpage{
         background-position-x: 300px;
     }
-    
-    
 
 }
 
